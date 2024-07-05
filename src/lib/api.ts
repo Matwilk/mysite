@@ -2,8 +2,11 @@ import { Post } from "@/interfaces/post";
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
+import pathPrefix from "./pathPrefix";
 
 const postsDirectory = join(process.cwd(), "_posts");
+
+const prefix = pathPrefix();
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
@@ -20,8 +23,11 @@ export function getPostBySlug(slug: string) {
   const { data, content } = matter(fileContents);
 
   const post = { ...data, slug: realSlug, content } as Post;
-  console.log('post', post);
-  return post
+
+  const postStr = JSON.stringify(post);
+  const postStrWithPrefixes = postStr.replaceAll(/\/assets/gi, prefix + '/assets')
+  console.log('post', postStrWithPrefixes);
+  return JSON.parse(postStrWithPrefixes);
 }
 
 export function getAllPosts(): Post[] {
