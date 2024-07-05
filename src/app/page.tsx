@@ -5,6 +5,8 @@ import { MoreStories } from "@/app/_components/more-stories";
 import { getAllPosts } from "@/lib/api";
 
 export default function Index() {
+  console.log('ENV', process.env);
+  
   const allPosts = getAllPosts();
 
   const heroPost = allPosts[0];
