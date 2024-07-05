@@ -10,6 +10,10 @@ export function getPostSlugs() {
 }
 
 export function getPostBySlug(slug: string) {
+  const isPages = process.env.GITHUB_PAGES === 'true'
+
+  console.log('getPostBySlug isPages', isPages);
+  
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
