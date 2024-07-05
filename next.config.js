@@ -1,13 +1,13 @@
 /**
  * @type {import('next').NextConfig}
  */
-const isProd = process.env.NODE_ENV == 'production'
+const isPages = process.env.GITHUB_PAGES === 'true'
 
-console.log('ODE_ENV', process.env.NODE_ENV);
+console.log('isPages', isPages);
 
 const nextConfig = {
   output: 'export',
-  basePath: isProd ? '/mysite' : '',
+  basePath: isPages ? '/mysite' : '',
  
   // Optional: Change the output directory `out` -> `dist`
   distDir: 'dist',
@@ -17,4 +17,4 @@ const nextConfig = {
   },
 }
  
-module.exports = nextConfig
+module.exports = nextConfig 
