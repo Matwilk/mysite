@@ -14,8 +14,6 @@ export function getPostSlugs() {
 
 export function getPostBySlug(slug: string) {
   const isPages = process.env.GITHUB_PAGES === 'true'
-
-  console.log('getPostBySlug isPages', isPages);
   
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
@@ -25,8 +23,8 @@ export function getPostBySlug(slug: string) {
   const post = { ...data, slug: realSlug, content } as Post;
 
   const postStr = JSON.stringify(post);
-  const postStrWithPrefixes = postStr.replaceAll(/\/assets/gi, prefix + '/assets')
-  console.log('post', postStrWithPrefixes);
+  const postStrWithPrefixes = postStr.replaceAll(/\/assets/gi, prefix + '/assets');
+
   return JSON.parse(postStrWithPrefixes);
 }
 

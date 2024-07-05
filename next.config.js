@@ -3,8 +3,6 @@
  */
 const isPages = process.env.GITHUB_PAGES === 'true'
 
-console.log('isPages', isPages);
-
 const nextConfig = {
   output: 'export',
   basePath: isPages ? '/mysite' : '',
