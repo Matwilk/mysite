@@ -37,13 +37,13 @@ export default function RootLayout({
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href={`${prefix}/favicon/mattcog-32x32.png`}
+          href={`${prefix}/favicon/favicon-32x32.png`}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href={`${prefix}/favicon/mattcog-16x16.png`}
+          href={`${prefix}/favicon/favicon-16x16.png`}
         />
         <link rel="manifest" href={`${prefix}/favicon/site.webmanifest`} />
         <link
