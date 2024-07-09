@@ -37,18 +37,18 @@ export default function RootLayout({
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href={`${prefix}/favicon/favicon-32x32.png`}
+          href={`${prefix}/favicon/mattcog-32x32.png`}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href={`${prefix}/favicon/favicon-16x16.png`}
+          href={`${prefix}/favicon/mattcog-16x16.png`}
         />
         <link rel="manifest" href={`${prefix}/favicon/site.webmanifest`} />
         <link
           rel="mask-icon"
-          href="/favicon/safari-pinned-tab.svg"
+          href={`${prefix}/favicon/safari-pinned-tab.svg`}
           color="#000000"
         />
         <link rel="shortcut icon" href={`${prefix}/favicon/favicon.ico`} />
