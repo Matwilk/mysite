@@ -1,8 +1,11 @@
 import { PostType } from "@/interfaces/postType";
+import pathPrefix from "@/lib/pathPrefix";
 
 type Props = {
   type: PostType;
 };
+
+const prefix = pathPrefix();
 
 const Avatar = ({ type } : Props ) => {
   let picture = '';
@@ -10,15 +13,15 @@ const Avatar = ({ type } : Props ) => {
 
   switch (type) {
     case 'music':
-      picture = '/assets/blog/categories/music.png'
+      picture = prefix + '/assets/blog/categories/music.png'
       name = 'Music';
       break;
     case 'travel':
-      picture = '/assets/blog/categories/travel.png'
+      picture = prefix + '/assets/blog/categories/travel.png'
       name = 'Travel';
       break;
     case 'coding':
-      picture = '/assets/blog/categories/coding.png'
+      picture = prefix + '/assets/blog/categories/coding.png'
       name = 'Coding';
       break;
   };
