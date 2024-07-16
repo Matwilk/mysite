@@ -7,6 +7,8 @@ import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
+import { Carousel } from "@/app/_components/carousel";
+
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -29,6 +31,7 @@ export default async function Post({ params }: Params) {
             date={post.date}
             postType={post.postType}
           />
+          {post.gallery && <Carousel  images={post.gallery}/>}
           <PostBody content={content} />
         </article>
       </Container>
