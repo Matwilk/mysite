@@ -33,13 +33,14 @@ export function HeroPost({
               {title}
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
+          <div className="flex flex-row flex-nowrap items-center gap-x-4 text-xl">
+            <Avatar type={postType} />
+            |
             <DateFormatter dateString={date} />
           </div>
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <Avatar type={postType} />
         </div>
       </div>
     </section>

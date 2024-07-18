@@ -31,6 +31,7 @@ export default async function Post({ params }: Params) {
             date={post.date}
             postType={post.postType}
           />
+          <p className="text-lg leading-relaxed mb-4">{post.excerpt}</p>
           {post.gallery && <Carousel  images={post.gallery}/>}
           <PostBody content={content} />
         </article>
