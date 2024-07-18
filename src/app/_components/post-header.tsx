@@ -23,11 +23,6 @@ export function PostHeader({ title, coverImage, date, postType }: Props) {
       <div className="mx-16 md:my-8">
         <CoverImage title={title} src={coverImage} />
       </div>
-      <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
-          <Avatar type={postType} />
-        </div>
-      </div>
     </>
   );
 }
