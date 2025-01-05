@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import pathPrefix from "@/lib/pathPrefix";
 
+const prefix = pathPrefix();
+
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
@@ -66,7 +68,7 @@ const HeroSection = () => {
         >
           <div className="rounded-lg bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src={pathPrefix() + "xxx/assets/hero-image.jpg"}
+              src={prefix + "/assets/hero-image.jpg"}
               alt="hero image"
               className="absolute rounded-lg transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={390}
