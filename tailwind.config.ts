@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 
 const config: Config = {
   darkMode: "class",
@@ -20,6 +21,8 @@ const config: Config = {
         "accent-7": "#333",
         success: "#0070f3",
         cyan: "#79FFE1",
+        primary: colors.orange,
+        secondary: colors.neutral,
       },
       spacing: {
         28: "7rem",
